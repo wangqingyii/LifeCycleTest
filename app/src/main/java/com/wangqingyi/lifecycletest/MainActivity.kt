@@ -36,9 +36,6 @@ class MainActivity : AppCompatActivity() {
         mBinding.mDialogTv.setOnClickListener {
             mDialog.show()
         }
-//        mBinding.mAddFragmentTv.setOnClickListener {
-//            addFragment(TestFragment1())
-//        }
         mBinding.mReplaceFragmentTv.setOnClickListener {
             addFragment(TestFragment2())
         }
