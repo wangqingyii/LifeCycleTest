@@ -9,12 +9,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LifeCycleTest">
-        <activity android:name=".MainActivity2"/>
-
+        <!-- 单实例模式Activity -->
+        <activity
+            android:name=".startmode.singleInstance.SingleInstanceActivity"
+            android:launchMode="singleInstance" />
+        <activity android:name=".startmode.singleInstance.SingleInstanceActivity2"/>
+        <!-- 栈内复用模式Activity -->
+        <activity
+            android:name=".startmode.singletask.SingleTaskActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".startmode.singletask.SingleTaskActivity2" />
+        <!-- 栈顶复用模式Activity -->
+        <activity
+            android:name=".startmode.singletop.SingleTopActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".startmode.singletop.SingleTopActivity2"
+            android:launchMode="singleTop" />
+        <!-- 默认模式Activity -->
+        <activity
+            android:name=".startmode.standard.StandardActivity"
+            android:launchMode="standard" />
+        <activity android:name=".MainActivity2" />
         <activity
             android:name=".DialogActivity"
-            android:theme="@style/Theme.AppCompat.Dialog"/>
-
+            android:theme="@style/Theme.AppCompat.Dialog" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

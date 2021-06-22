@@ -7,6 +7,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.wangqingyi.lifecycletest.databinding.ActivityMainBinding
 import com.wangqingyi.lifecycletest.dialog.DialogFactory
+import com.wangqingyi.lifecycletest.startmode.singleInstance.SingleInstanceActivity
+import com.wangqingyi.lifecycletest.startmode.singletask.SingleTaskActivity
+import com.wangqingyi.lifecycletest.startmode.singletop.SingleTopActivity
+import com.wangqingyi.lifecycletest.startmode.standard.StandardActivity
 
 
 class MainActivity : AppCompatActivity() {
@@ -39,6 +43,25 @@ class MainActivity : AppCompatActivity() {
         mBinding.mReplaceFragmentTv.setOnClickListener {
             addFragment(TestFragment2())
         }
+
+        // 启动模式
+        mBinding.mStandardTv.setOnClickListener {
+            val intent = Intent(this, StandardActivity::class.java)
+            startActivity(intent)
+        }
+        mBinding.mSingleTopTv.setOnClickListener {
+            val intent = Intent(this, SingleTopActivity::class.java)
+            startActivity(intent)
+        }
+        mBinding.mSingleTaskTv.setOnClickListener {
+            val intent = Intent(this, SingleTaskActivity::class.java)
+            startActivity(intent)
+        }
+        mBinding.mSingleInstanceTv.setOnClickListener {
+            val intent = Intent(this, SingleInstanceActivity::class.java)
+            startActivity(intent)
+        }
+
         addFragment(TestFragment1())
         Log.d(TAG, "onCreate")
     }

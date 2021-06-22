@@ -27,7 +27,7 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/common_bj10_ffc555"
         android:gravity="center"
-        android:text="跳转"
+        android:text="跳转Activity"
         android:textColor="#FFFFFF"
         android:textSize="15sp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -48,20 +48,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mJumpTv" />
 
-    <!--    <TextView-->
-    <!--        android:id="@+id/mAddFragmentTv"-->
-    <!--        android:layout_width="150dp"-->
-    <!--        android:layout_height="20dp"-->
-    <!--        android:layout_marginTop="20dp"-->
-    <!--        android:background="@drawable/common_bj10_ffc555"-->
-    <!--        android:gravity="center"-->
-    <!--        android:text="添加Fragment"-->
-    <!--        android:textColor="#FFFFFF"-->
-    <!--        android:textSize="15sp"-->
-    <!--        app:layout_constraintEnd_toStartOf="@+id/mReplaceFragmentTv"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/mDialogTv" />-->
-
     <TextView
         android:id="@+id/mReplaceFragmentTv"
         android:layout_width="150dp"
@@ -77,14 +63,72 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mDialogTv" />
 
+    <TextView
+        android:id="@+id/mStartModeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="启动模式"
+        android:textColor="#333333"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mReplaceFragmentTv" />
+
+    <TextView
+        android:id="@+id/mStandardTv"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_bj10_ffc555"
+        android:gravity="center"
+        android:text="Standard模式"
+        app:layout_constraintEnd_toStartOf="@+id/mSingleTopTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mStartModeTv" />
+
+    <TextView
+        android:id="@+id/mSingleTopTv"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_bj10_ffc555"
+        android:gravity="center"
+        android:text="SingleTop模式"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mStandardTv"
+        app:layout_constraintTop_toBottomOf="@+id/mStartModeTv" />
+
+    <TextView
+        android:id="@+id/mSingleTaskTv"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/common_bj10_ffc555"
+        android:gravity="center"
+        android:text="SingleTask模式"
+        app:layout_constraintEnd_toStartOf="@+id/mSingleInstanceTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mStandardTv" />
+
+    <TextView
+        android:id="@+id/mSingleInstanceTv"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/common_bj10_ffc555"
+        android:gravity="center"
+        android:text="SingleInstance模式"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mSingleTaskTv"
+        app:layout_constraintTop_toBottomOf="@+id/mStandardTv" />
+
     <FrameLayout
         android:id="@+id/mFrameLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mReplaceFragmentTv"/>
+        app:layout_constraintTop_toBottomOf="@+id/mSingleInstanceTv" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
